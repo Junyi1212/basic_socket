@@ -39,8 +39,8 @@ int CXSocketProtocol::GetProtocolContentLen(const char * pProtocolData)
 
 XReadStatus CXSocketProtocol::HandleChunkedRead(const char *pProtocolData, int iBufferLen, int& iProtocolMsgLen)
 {
-    //const char correct_head[] = "XSONIA";
-    const char correct_tail[] = "xsonia";
+    //const char correct_head[] = "XJUNYI";
+    const char correct_tail[] = "xjunyi";
 
     if(NULL == pProtocolData || iBufferLen <= 0)
     {
@@ -99,9 +99,9 @@ XReadStatus CXSocketProtocol::HandleChunkedRead(const char *pProtocolData, int i
         std::string strLine;
         strLine.assign(pFindX, pFindX + PACKET_HEAD_LEN + 1);
     
-        if(strLine.find("XSONIA") != std::string::npos)
+        if(strLine.find("XJUNYI") != std::string::npos)
         {
-            //XSDbug("XSONIA Head!!!\n");
+            //XSDbug("XJUNYI Head!!!\n");
             break;
         }
         else

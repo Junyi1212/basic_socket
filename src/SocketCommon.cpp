@@ -191,7 +191,7 @@ int CSocketPacketSend::Pack(int seq, uchar* data, uint len)
     }   
     if(len <= DATA_MAX_SIZE)
     {
-        sHead = "XSONIA";
+        sHead = "XJUNYI";
         
         char tmpSeq[16] = {0};
         sprintf(tmpSeq, "%04d", seq); //АэИзЈє"0097"
@@ -204,7 +204,7 @@ int CSocketPacketSend::Pack(int seq, uchar* data, uint len)
         sLen = tmpLen;
         
         sData.assign(data, data+len);
-        sTail = "xsonia";
+        sTail = "xjunyi";
 
         return 0;
     }
